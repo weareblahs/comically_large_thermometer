@@ -1,2 +1,3 @@
-# comically_large_thermometer
-Is Malaysia sick? No-nonsense weather checker from METMalaysia's data
+# What's this?
+
+Inspired by the mid-year heat wave in Malaysia, this aims to calculate the average temperature of Malaysia (all states) through METMalaysia's API via data.gov.my.
