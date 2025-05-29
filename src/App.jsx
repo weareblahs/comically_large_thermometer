@@ -36,7 +36,7 @@ function App() {
           Malaysia map
         </a>
         ,{" "}
-        <a href="https://commons.wikimedia.org/wiki/File:Hand_with_gloves_holding_non-contact_infrared_thermometer_on_blue_background_with_copy_space.jpg">
+        <a href="https://commons.wikimedia.org/wiki/File:Hand_holding_non-contact_infrared_thermometer_checking_a_person_temprature._COVID-19_Concept.jpg">
           Infared temperature sensor
         </a>
         ).{" "}
