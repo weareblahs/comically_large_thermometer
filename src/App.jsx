@@ -29,8 +29,9 @@ function App() {
         {temp.length != 0 ? `based on results from ${temp?.[1]} locations` : ""}
       </h4>
       <p className="text-center">
-        data from via <a href="https://data.gov.my">data.gov.my</a>. Used under
-        CC BY 4.0. Original images from Wikimedia Commons (
+        data from the Malaysian Meteorological Department via{" "}
+        <a href="https://data.gov.my">data.gov.my</a>. Used under CC BY 4.0.
+        Original images from Wikimedia Commons (
         <a href="https://en.wikipedia.org/wiki/File:Blank_malaysia_map.svg">
           Malaysia map
         </a>
