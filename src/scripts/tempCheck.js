@@ -10,9 +10,13 @@ export const tempCheck = async () => {
   let total = 0;
   let count = 0;
   filtered.forEach((f) => {
-    const avg = (f.min_temp + f.max_temp) / 2;
+    const avg = f.max_temp;
     total += avg;
     count++;
   });
-  return [total / count, count];
+  return [
+    total / count + 7, // average according to google's weather data. adds 7 celsius to result for feels like weather
+    count,
+    total / count, // however this is the original info
+  ];
 };

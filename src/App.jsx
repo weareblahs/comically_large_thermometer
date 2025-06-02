@@ -22,11 +22,23 @@ function App() {
           className="w-75"
         />
       </center>
-      <h1 className="text-center" style={{ fontSize: "5em", color: "green" }}>
+      <h1
+        className="text-center"
+        style={{
+          fontSize: "5em",
+          color: `${temp?.[0] > 37.5 ? "red" : "green"}`,
+        }}
+      >
         {temp.length != 0 ? `${temp?.[0].toFixed(1)}°C` : "..."}
       </h1>
       <h4 className="text-center">
-        {temp.length != 0 ? `based on results from ${temp?.[1]} locations` : ""}
+        {temp.length != 0
+          ? `Based on results from ${
+              temp?.[1]
+            } locations. Original non-adjusted temperature is ${temp?.[2].toFixed(
+              1
+            )}°C`
+          : ""}
       </h4>
       <p className="text-center">
         data from the Malaysian Meteorological Department via{" "}
