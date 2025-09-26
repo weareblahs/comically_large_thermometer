@@ -15,7 +15,7 @@ export const tempCheck = async () => {
     count++;
   });
   return [
-    total / count + 7, // average according to google's weather data. adds 7 celsius to result for feels like weather
+    total / count,
     count,
     total / count, // however this is the original info
   ];
