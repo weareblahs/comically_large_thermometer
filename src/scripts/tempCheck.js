@@ -15,7 +15,7 @@ export const tempCheck = async () => {
     count++;
   });
   return [
-    total / count + 4,
+    total / count + 3,
     count,
     total / count, // however this is the original info
   ];
