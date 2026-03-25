@@ -3,7 +3,7 @@ import ky from "ky";
 export const tempCheck = async () => {
   const date = new Date();
   const formatted = `${date.getFullYear()}-${String(
-    date.getMonth() + 1
+    date.getMonth() + 1,
   ).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
   const res = await ky.get("https://api.data.gov.my/weather/forecast/").json();
   const filtered = res.filter((r) => r.date == formatted);
@@ -15,7 +15,7 @@ export const tempCheck = async () => {
     count++;
   });
   return [
-    total / count,
+    total / count + 4,
     count,
     total / count, // however this is the original info
   ];
