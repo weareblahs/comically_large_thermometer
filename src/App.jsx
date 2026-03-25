@@ -13,11 +13,28 @@ function App() {
 
     getData();
   }, []);
+
+  const [dataColor, setDataColor] = useState("header");
+  const [color, setTextColor] = useState("black");
+  // determine color from data
+  useEffect(() => {
+    if (temp[0] < 37) {
+      setDataColor("header_normal");
+      setTextColor("green");
+    } else if (temp[0] >= 37 && temp[0] < 37.5) {
+      setDataColor("header_risk");
+      setTextColor("gold");
+    } else if (temp[0] > 37.5) {
+      setDataColor("header_high");
+      setTextColor("red");
+    }
+  }, [temp]);
+
   return (
     <>
       <center>
         <img
-          src="./header.png"
+          src={`./${dataColor}.png`}
           alt="An infared temperature sensor pointing at Malaysia."
           className="w-full lg:w-3xl"
         />
@@ -28,7 +45,7 @@ function App() {
           className="text-center"
           style={{
             fontSize: "5em",
-            color: `${temp?.[0] > 37.5 ? "red" : "green"}`,
+            color,
           }}
         >
           {temp.length != 0 ? `${temp?.[0].toFixed(1)}°C` : "..."}
